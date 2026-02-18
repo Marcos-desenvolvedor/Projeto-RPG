@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "nome": "Arthos",
+    "classe": "Guerreiro",
+    "nivel": 2,
+    "xp": 150,
+    "vidaMax": 140,
+    "vidaAtual": 120,
+    "dano": 14,
+    "ouro": 50
+  },
+  {
+    "id": 2,
+    "nome": "Lyra",
+    "classe": "Mago",
+    "nivel": 3,
+    "xp": 320,
+    "vidaMax": 90,
+    "vidaAtual": 90,
+    "dano": 22,
+    "ouro": 120
+  },
+  {
+    "id": 3,
+    "nome": "Kael",
+    "classe": "Arqueiro",
+    "nivel": 1,
+    "xp": 40,
+    "vidaMax": 100,
+    "vidaAtual": 100,
+    "dano": 15,
+    "ouro": 20
+  }
+]
