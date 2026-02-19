@@ -1,0 +1,12 @@
+{
+  "id": 4,
+  "nome": "Marcos",
+  "classe": "Mago",
+  "nivel": 1,
+  "xp": 20,
+  "ouro": 0,
+  "vidaMax": 90,
+  "dano": 22,
+  "vidaAtual": 84,
+  "ourp": null
+}

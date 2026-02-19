@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nome": "Goblin",
+    "vida": 40,
+    "vidaAtual": 40,
+    "dano": 6,
+    "xpDrop": 20,
+    "ouroDrop": 10
+  },
+  {
+    "id": 2,
+    "nome": "Lobo Selvagem",
+    "vida": 55,
+    "vidaAtual": 55,
+    "dano": 8,
+    "xpDrop": 30,
+    "ouroDrop": 15
+  },
+  {
+    "id": 3,
+    "nome": "Esqueleto Guerreiro",
+    "vida": 70,
+    "vidaAtual": 70,
+    "dano": 10,
+    "xpDrop": 45,
+    "ouroDrop": 25
+  },
+  {
+    "id": 4,
+    "nome": "Orc Brutal",
+    "vida": 95,
+    "vidaAtual": 95,
+    "dano": 14,
+    "xpDrop": 70,
+    "ouroDrop": 40
+  },
+  {
+    "id": 5,
+    "nome": "Mago Sombrio",
+    "vida": 80,
+    "dano": 18,
+    "vidaAtual": 80,
+    "xpDrop": 90,
+    "ouroDrop": 60
+  }
+]

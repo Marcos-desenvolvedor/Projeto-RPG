@@ -42,5 +42,17 @@
     "vidaMax": 90,
     "dano": 22,
     "vidaAtual": 90
+  },
+
+  {
+    "id": 5,
+    "nome": "Lucas",
+    "classe": "Guerreiro",
+    "nivel": 1,
+    "xp": 0,
+    "ouro": 0,
+    "vidaMax": 120,
+    "dano": 14,
+    "vidaAtual": 120
   }
 ]

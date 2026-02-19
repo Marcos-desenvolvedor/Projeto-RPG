@@ -66,3 +66,20 @@ export function criarPersonagem(nome, classe) {
     mensagem: "Personagem salvo",
   };
 }
+
+export function listarPersonagens() {
+  const PATH = "./data/personagem.json";
+  const personagens = lerBanco(PATH);
+
+  if (personagens === "" || undefined) {
+    return {
+      ok: false,
+      mensagem: "Erro no sistema",
+    };
+  }
+  return {
+    ok: true,
+    mensagem: "Buscar finalizada",
+    lista: personagens,
+  };
+}
