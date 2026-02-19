@@ -1,5 +1,11 @@
+import { lerBanco, salvarBanco } from "./db.js";
+
+const PATH = "./data/personagem.json";
+const personagens = lerBanco(PATH);
+
 export class Personagem {
   constructor(nome, classe) {
+    this.id = personagens.length += 1;
     this.nome = nome;
     this.classe = classe;
     this.nivel = 1;
@@ -23,7 +29,10 @@ export class Personagem {
         break;
 
       default:
-        throw new Error("Classe inválida");
+        return {
+          ok: false,
+          mensagem: "Classe inválida",
+        };
     }
 
     this.vidaAtual = this.vidaMax;
@@ -47,9 +56,13 @@ export function criarPersonagem(nome, classe) {
     };
   }
 
+  const novoPersonagem = new Personagem(nome, classe);
+
+  personagens.push(novoPersonagem);
+  salvarBanco(PATH, personagens);
+
   return {
     ok: true,
-    mensagem: "Personagem válido",
+    mensagem: "Personagem salvo",
   };
-  const novoPersonagem = new Personagem(nome, classe);
 }

@@ -31,5 +31,16 @@
     "vidaAtual": 100,
     "dano": 15,
     "ouro": 20
+  },
+  {
+    "id": 4,
+    "nome": "Marcos",
+    "classe": "Mago",
+    "nivel": 1,
+    "xp": 0,
+    "ouro": 0,
+    "vidaMax": 90,
+    "dano": 22,
+    "vidaAtual": 90
   }
 ]
