@@ -1,3 +1,4 @@
+import { lerNome } from "../prompts/lerDados.js";
 import { lerBanco, salvarBanco } from "./db.js";
 
 const PATH = "./data/personagem.json";
@@ -81,5 +82,27 @@ export function listarPersonagens() {
     ok: true,
     mensagem: "Buscar finalizada",
     lista: personagens,
+  };
+}
+
+export function verificaPersonagem(valor) {
+  const PATH = "./data/personagem.json";
+  const personagens = lerBanco(PATH);
+
+  const personagem = lerNome(valor);
+
+  const personagemExiste = personagens.find((p) => p.nome === personagem);
+
+  if (!personagemExiste) {
+    return {
+      ok: false,
+      mensagem: "Personagem não existe",
+    };
+  }
+
+  return {
+    ok: true,
+    mensagem: "Personagem existe",
+    personagem: personagemExiste,
   };
 }

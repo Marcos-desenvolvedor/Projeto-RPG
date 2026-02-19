@@ -1,12 +1,12 @@
 {
-  "id": 4,
-  "nome": "Marcos",
-  "classe": "Mago",
+  "id": 5,
+  "nome": "Lucas",
+  "classe": "Guerreiro",
   "nivel": 1,
-  "xp": 20,
+  "xp": 45,
   "ouro": 0,
-  "vidaMax": 90,
-  "dano": 22,
-  "vidaAtual": 84,
+  "vidaMax": 120,
+  "dano": 14,
+  "vidaAtual": 80,
   "ourp": null
 }

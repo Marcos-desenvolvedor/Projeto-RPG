@@ -1,4 +1,5 @@
 import {
+  fluxoBatalha,
   fluxoCriarPersonagem,
   fluxoMostrarPersonagens,
 } from "./fluxos/fluxos.js";
@@ -12,7 +13,8 @@ function Menu() {
     console.log(`---- MENU ----
     1 - CRIAR PERSONAGEM
     2 - MOSTRAR PERSONAGENS 
-    3 - SAIR `);
+    3 - BATALHA
+    4 - SAIR `);
 
     const opcao = prompt("Qual sua opção: ");
 
@@ -24,6 +26,9 @@ function Menu() {
         fluxoMostrarPersonagens();
         break;
       case "3":
+        fluxoBatalha();
+        break;
+      case "4":
         console.log("Saindo");
         return;
       default:
@@ -33,30 +38,4 @@ function Menu() {
   }
 }
 
-// Menu();
-const personagem = {
-  id: 4,
-  nome: "Marcos",
-  classe: "Mago",
-  nivel: 1,
-  xp: 0,
-  ouro: 0,
-  vidaMax: 90,
-  dano: 22,
-  vidaAtual: 90,
-};
-
-const inimigo = {
-  id: 1,
-  nome: "Goblin",
-  vida: 40,
-  vidaAtual: 40,
-  dano: 6,
-  xpDrop: 20,
-  ouroDrop: 10,
-};
-
-iniciarBatalha({
-  player: personagem,
-  inimigo: inimigo,
-});
+Menu();
