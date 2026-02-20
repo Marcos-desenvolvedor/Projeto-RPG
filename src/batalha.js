@@ -13,11 +13,16 @@ export function iniciarBatalha(personagens) {
     const opcao = Number(prompt(" 1 - ATACAR | 2 - FUGIR: "));
 
     if (opcao === 1) {
-      inimigo.vidaAtual -= player.dano;
+      const playerAtaqueAleatorio = Math.floor(Math.random() * player.dano) + 1;
+      inimigo.vidaAtual -= playerAtaqueAleatorio;
 
       if (inimigo.vidaAtual <= 0) break;
 
-      player.vidaAtual -= inimigo.dano;
+      const inimigoAtaqueAleatorio =
+        Math.floor(Math.random() * inimigo.dano) + 1;
+
+      player.vidaAtual -= inimigoAtaqueAleatorio;
+      
     } else if (opcao === 2) {
       console.log("Você fugiu");
       return { ok: true, resultado: "fuga" };
