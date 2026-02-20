@@ -1,8 +1,10 @@
-import { salvarBanco } from "./db.js";
+import { salvarBanco, lerBanco } from "./db.js";
 import PromptSync from "prompt-sync";
 const prompt = PromptSync();
 
 export function iniciarBatalha(personagens) {
+  const listaPersonagens = lerBanco("./data/personagem.json");
+
   const player = personagens.player;
   const inimigo = personagens.inimigo;
 
@@ -14,7 +16,9 @@ export function iniciarBatalha(personagens) {
 
     if (opcao === 1) {
       const playerAtaqueAleatorio = Math.floor(Math.random() * player.dano) + 1;
+
       inimigo.vidaAtual -= playerAtaqueAleatorio;
+      console.log(`Você deu ${playerAtaqueAleatorio} dano`);
 
       if (inimigo.vidaAtual <= 0) break;
 
@@ -22,6 +26,7 @@ export function iniciarBatalha(personagens) {
         Math.floor(Math.random() * inimigo.dano) + 1;
 
       player.vidaAtual -= inimigoAtaqueAleatorio;
+      console.log(`Inimigo deu ${inimigoAtaqueAleatorio} dano`);
       
     } else if (opcao === 2) {
       console.log("Você fugiu");
@@ -44,9 +49,15 @@ export function iniciarBatalha(personagens) {
   );
 
   player.xp += inimigo.xpDrop;
-  player.ourp += inimigo.ouroDrop;
+  player.ouro += inimigo.ouroDrop;
 
-  salvarBanco("personagem.json", player);
+  const indexPersonagem = listaPersonagens.findIndex((p) => p.id === player.id);
+
+  if (indexPersonagem) {
+    listaPersonagens[indexPersonagem] = player;
+  }
+
+  salvarBanco("./data/personagem.json", listaPersonagens);
 
   return {
     ok: true,

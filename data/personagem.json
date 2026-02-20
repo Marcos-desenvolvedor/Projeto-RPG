@@ -37,13 +37,12 @@
     "nome": "Marcos",
     "classe": "Mago",
     "nivel": 1,
-    "xp": 0,
-    "ouro": 0,
+    "xp": 100,
+    "ouro": 55,
     "vidaMax": 90,
     "dano": 22,
-    "vidaAtual": 90
+    "vidaAtual": 11
   },
-
   {
     "id": 5,
     "nome": "Lucas",

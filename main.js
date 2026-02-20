@@ -5,7 +5,6 @@ import {
 } from "./fluxos/fluxos.js";
 
 import PromptSync from "prompt-sync";
-import { iniciarBatalha } from "./src/batalha.js";
 const prompt = PromptSync();
 
 function Menu() {

@@ -3,10 +3,9 @@
   "nome": "Marcos",
   "classe": "Mago",
   "nivel": 1,
-  "xp": 45,
-  "ouro": 0,
+  "xp": 90,
+  "ouro": 60,
   "vidaMax": 90,
   "dano": 22,
-  "vidaAtual": 63,
-  "ourp": null
+  "vidaAtual": 19
 }
