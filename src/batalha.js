@@ -6,6 +6,7 @@ export function iniciarBatalha(personagens) {
   const listaPersonagens = lerBanco("./data/personagem.json");
 
   const player = personagens.player;
+
   const inimigo = personagens.inimigo;
 
   while (player.vidaAtual > 0 && inimigo.vidaAtual > 0) {
@@ -27,7 +28,6 @@ export function iniciarBatalha(personagens) {
 
       player.vidaAtual -= inimigoAtaqueAleatorio;
       console.log(`Inimigo deu ${inimigoAtaqueAleatorio} dano`);
-      
     } else if (opcao === 2) {
       console.log("Você fugiu");
       return { ok: true, resultado: "fuga" };
@@ -50,10 +50,11 @@ export function iniciarBatalha(personagens) {
 
   player.xp += inimigo.xpDrop;
   player.ouro += inimigo.ouroDrop;
+  player.vidaAtual = player.vidaMax;
 
   const indexPersonagem = listaPersonagens.findIndex((p) => p.id === player.id);
 
-  if (indexPersonagem) {
+  if (indexPersonagem !== -1) {
     listaPersonagens[indexPersonagem] = player;
   }
 
