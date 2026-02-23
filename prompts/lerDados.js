@@ -5,22 +5,25 @@ export function lerNome(valor) {
   while (true) {
     const nome = prompt(valor).trim();
 
-    if (nome === "" || nome === undefined) {
+    const nomeFormatado =
+      nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase();
+
+    if (nomeFormatado === "" || nomeFormatado === undefined) {
       console.log("Nome inválido");
       continue;
     }
 
-    if (!isNaN(nome)) {
+    if (!isNaN(nomeFormatado)) {
       console.loh("Nome não pode ser um número");
       continue;
     }
-    return nome;
+    return nomeFormatado;
   }
 }
 
 export function lerClasse(valor) {
   while (true) {
-    const classe = prompt(valor).trim();
+    const classe = prompt(valor).trim().toLowerCase();
 
     const regrasClasses = ["Arqueiro", "Mago", "Guerreiro"];
 

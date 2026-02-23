@@ -52,6 +52,13 @@ export function iniciarBatalha(personagens) {
   player.ouro += inimigo.ouroDrop;
   player.vidaAtual = player.vidaMax;
 
+  if (player.xp >= 100) {
+    const resto = player.xp % 100;
+    player.nivel += 1;
+
+    player.xp = resto;
+  }
+
   const indexPersonagem = listaPersonagens.findIndex((p) => p.id === player.id);
 
   if (indexPersonagem !== -1) {
